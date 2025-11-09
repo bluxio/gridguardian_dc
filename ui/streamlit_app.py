@@ -5,7 +5,9 @@ import sys
 import streamlit as st, pandas as pd
 
 sys.path.append(os.path.dirname(os.path.dirname(__file__)))  # add project root to sys.path
-from app import run_dc, evaluate_dc, evaluate_dc_nemotron
+import os, sys
+sys.path.append(os.path.dirname(os.path.dirname(__file__)))
+from core_app import run_dc, evaluate_dc, evaluate_dc_nemotron
 
 st.set_page_config(page_title="GridGuardian DC", layout="wide")
 st.title("GridGuardian DC — Datacenter Energy & Thermal Control")

@@ -1,0 +1,37 @@
+{"level": "OK", "message": "All clusters stable"}
+{"level": "OK", "message": "All clusters stable"}
+{"level": "OK", "message": "All clusters stable"}
+{"level": "CRITICAL", "message": "Issues detected in ['STORAGE_C', 'EDGE_D']"}
+{"level": "CRITICAL", "message": "Issues detected in ['GPU_A', 'EDGE_D']"}
+{"level": "CRITICAL", "message": "Issues detected in ['GPU_A', 'GPU_A']"}
+{"level": "CRITICAL", "message": "Issues detected in ['GPU_A']"}
+{"level": "OK", "message": "All clusters stable"}
+{"level": "CRITICAL", "message": "Issues detected in ['GPU_A', 'STORAGE_C', 'EDGE_D']"}
+{"level": "CRITICAL", "message": "Issues detected in ['EDGE_D', 'GPU_A', 'CPU_B', 'STORAGE_C', 'EDGE_D']"}
+{"level": "CRITICAL", "message": "Issues detected in ['CPU_B', 'STORAGE_C', 'STORAGE_C']"}
+{"level": "CRITICAL", "message": "Issues detected in ['STORAGE_C', 'EDGE_D']"}
+{"level": "CRITICAL", "message": "Issues detected in ['GPU_A', 'CPU_B', 'STORAGE_C', 'EDGE_D']"}
+{"level": "CRITICAL", "message": "Issues detected in ['EDGE_D']"}
+{"level": "CRITICAL", "message": "Issues detected in ['CPU_B', 'EDGE_D', 'STORAGE_C']"}
+{"level": "CRITICAL", "message": "Issues detected in ['GPU_A', 'STORAGE_C', 'EDGE_D']"}
+{"level": "CRITICAL", "message": "Issues detected in ['GPU_A', 'STORAGE_C', 'EDGE_D']"}
+{"level": "CRITICAL", "message": "Issues detected in ['GPU_A', 'EDGE_D']"}
+{"level": "OK", "message": "All clusters stable"}
+{"level": "CRITICAL", "message": "Issues detected in ['STORAGE_C', 'EDGE_D', 'GPU_A', 'STORAGE_C', 'EDGE_D']"}
+{"level": "CRITICAL", "message": "Issues detected in ['STORAGE_C']"}
+{"level": "CRITICAL", "message": "Issues detected in ['GPU_A', 'EDGE_D']"}
+{"level": "CRITICAL", "message": "Issues detected in ['STORAGE_C', 'EDGE_D', 'GPU_A', 'STORAGE_C']"}
+{"level": "OK", "message": "All clusters stable"}
+{"level": "CRITICAL", "message": "Issues detected in ['GPU_A', 'GPU_A']"}
+{"level": "CRITICAL", "message": "Issues detected in ['GPU_A']"}
+{"level": "CRITICAL", "message": "Issues detected in ['GPU_A', 'GPU_A']"}
+{"level": "OK", "message": "All clusters stable"}
+{"level": "OK", "message": "All clusters stable"}
+{"level": "CRITICAL", "message": "Issues detected in ['GPU_A']"}
+{"level": "OK", "message": "All clusters stable"}
+{"level": "CRITICAL", "message": "Issues detected in ['GPU_A']"}
+{"level": "CRITICAL", "message": "Issues detected in ['GPU_A']"}
+{"level": "CRITICAL", "message": "Issues detected in ['GPU_A']"}
+{"level": "CRITICAL", "message": "Issues detected in ['GPU_A']"}
+{"level": "OK", "message": "All clusters stable"}
+{"level": "CRITICAL", "message": "Issues detected in ['GPU_A']"}

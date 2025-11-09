@@ -1,0 +1,33 @@
+{
+  "timestep": 0,
+  "power_draw_kw": {
+    "GPU_A": 55,
+    "CPU_B": 28,
+    "STORAGE_C": 14,
+    "EDGE_D": 10
+  },
+  "cooling_online_kw": {
+    "GPU_A": 20,
+    "CPU_B": 10,
+    "STORAGE_C": 6,
+    "EDGE_D": 5
+  },
+  "battery_kw": {
+    "GPU_A": 15,
+    "CPU_B": 6,
+    "STORAGE_C": 5,
+    "EDGE_D": 4
+  },
+  "utilization": {
+    "GPU_A": 0.85,
+    "CPU_B": 0.45,
+    "STORAGE_C": 0.3,
+    "EDGE_D": 0.25
+  },
+  "temp_c": {
+    "GPU_A": 86,
+    "CPU_B": 65,
+    "STORAGE_C": 58,
+    "EDGE_D": 55
+  }
+}

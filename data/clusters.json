@@ -1,0 +1,6 @@
+{
+  "clusters": ["GPU_A", "CPU_B", "STORAGE_C", "EDGE_D"],
+  "base_grid_kw":      {"GPU_A": 30, "CPU_B": 40, "STORAGE_C": 25, "EDGE_D": 15},
+  "cooling_capacity_kw":{"GPU_A": 50, "CPU_B": 30, "STORAGE_C": 20, "EDGE_D": 15},
+  "battery_max_kw":    {"GPU_A": 25, "CPU_B": 10, "STORAGE_C": 8,  "EDGE_D": 6}
+}

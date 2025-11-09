@@ -1,13 +1,27 @@
 import json
 import os
 import sys
+import importlib
+
+proj_root = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+if proj_root not in sys.path:
+    sys.path.append(proj_root)
+
+try:
+    core = importlib.import_module("core_app")
+except Exception as e:
+    import streamlit as st  # type: ignore
+
+    st.error(f"Failed to import core_app: {type(e).__name__}: {e}")
+    raise
 
 import streamlit as st, pandas as pd
 
-sys.path.append(os.path.dirname(os.path.dirname(__file__)))  # add project root to sys.path
-import os, sys
-sys.path.append(os.path.dirname(os.path.dirname(__file__)))
-from core_app import run_dc, evaluate_dc, evaluate_dc_nemotron
+assert (
+    hasattr(core, "run_dc")
+    and hasattr(core, "evaluate_dc")
+    and hasattr(core, "evaluate_dc_nemotron")
+), "core_app missing required functions"
 
 st.set_page_config(page_title="GridGuardian DC", layout="wide")
 st.title("GridGuardian DC — Datacenter Energy & Thermal Control")
@@ -22,7 +36,7 @@ with colB:
     use_llm = st.toggle("Use Nemotron planner (stub)", value=False)
 
 if st.button("Run Controller"):
-    res = run_dc(scenario, tau, induce_failure=induce_failure, use_llm=use_llm)
+    res = core.run_dc(scenario, tau, induce_failure=induce_failure, use_llm=use_llm)
     c1, c2 = st.columns(2)
     with c1:
         st.subheader("Power Balance (kW) — Before")
@@ -66,7 +80,7 @@ with col2:
 
 @st.cache_data(show_spinner=False)
 def _cached_eval(tau, use_llm):
-    return evaluate_dc(tau=tau, use_llm=use_llm)
+    return core.evaluate_dc(tau=tau, use_llm=use_llm)
 
 
 if st.button("Run Evaluator"):
@@ -85,7 +99,7 @@ with colg3:
     nemo_use_llm = st.toggle("Use Nemotron planner in eval", value=False, key="nemo_use_llm")
 
 if st.button("Run Nemotron Eval"):
-    summary = evaluate_dc_nemotron(tau=nemo_tau, use_llm=nemo_use_llm, n_scenarios=int(nemo_n))
+    summary = core.evaluate_dc_nemotron(tau=nemo_tau, use_llm=nemo_use_llm, n_scenarios=int(nemo_n))
     st.write(f"Pass rate: {summary['passed']}/{summary['total']} = {summary['score']:.2f}")
     for idx, run in enumerate(summary["runs"]):
         score = run["grade"].get("score", 0.0)
